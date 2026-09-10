@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(){
+    int a,b,c;
+    int max,mid,min;
+
+    printf("Enter three numbers: \n");
+    scanf("%d %d %d",&a,&b,&c);
+    max=a;
+    min=c;
+
+    if(b>max){
+        max=b;
+    }
+    if(c>max){
+        max=c;
+    }
+    if(a<min){
+        min=a;
+    }
+    if(b<min){
+        min=b;
+    }
+    mid=a+b+c-max-min;
+    printf("The maximum number is: %d\n",max);
+    printf("The middle number is : %d\n",mid);
+    printf("THe minimum number is: %d\n",min);
+}
