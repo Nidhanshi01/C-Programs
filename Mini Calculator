@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    char ch;
+
+    printf("**** CALCULATOR ****\n");
+
+    printf("+ : Addition\n");
+    printf("- : Subtraction\n");
+    printf("* : Multiplication\n");
+    printf("/ : Division\n");
+
+    printf("Enter your desired operation: ");
+    scanf(" %c", &ch);
+
+    printf("Enter two numbers to be operated on: ");
+    scanf("%d %d", &a, &b);
+
+    switch (ch)
+    {
+        case '+': {
+            int add;
+            add = a + b;
+            printf("Result: %d\n", add);
+            break;
+        }
+
+        case '-': {
+            int sub;
+            sub = a - b;
+            printf("Result: %d\n", sub);
+            break;
+        }
+
+        case '*': {
+            int m;
+            m = a * b;
+            printf("Result: %d\n", m);
+            break;
+        }
+
+        case '/': {
+            int d;
+
+            if (b != 0) {
+                d = a / b;
+                printf("Result: %d\n", d);
+            } else {
+                printf("Error: Cannot divide by zero.\n");
+            }
+
+            break;
+        }
+
+        default:
+            printf("Invalid operation!\n");
+            break;
+    }
+
+    return 0;
+}
